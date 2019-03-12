@@ -1,0 +1,12 @@
+<meta>
+	<info
+	
+		author="Overlord"
+		version="1.0.0"
+		name="Overlord's Position Saver"
+		description="Save and Load positions for Race gamemode, it can also measure time between warps. helpful for mappers and testers"
+		type="script"
+	/>
+	
+	<script src="client.lua" type="client"/>
+</meta>
