@@ -8,11 +8,11 @@
 --Github page: https://github.com/Sagr7/PositionSaver
 ----------------------------------------------------------
 --Commands:
-	-- /sw				For save warp
-	-- /lw				For load warp
-	-- /dw				For delete warp
-	-- /resetWarps		For delete all warps
-	-- /duration		duration between the first and the last warp
+	-- /sw				Save Warp
+	-- /lw				Load Warp
+	-- /dw				Delete Warp
+	-- /resetWarps		Delete all warps
+	-- /duration		Duration between the first and the last warp
 	
 addEventHandler("onClientResourceStart", resourceRoot, function()
 	outputChatBox("-----------------------------------------------")
@@ -171,6 +171,11 @@ addCommandHandler("lw", function(cmd, id)
 end)
 
 addCommandHandler("dw", function(cmd, id)
+	if not allowedToAction then
+		outputChatBox("#ff0000Overlord: #ffffffThe previous loading hasn't done yet..", _, _, _, true)
+		return false
+	end
+	
 	if not id or not tonumber(id) then
 		id = #warps
 	end
@@ -207,7 +212,7 @@ addCommandHandler("duration", function()
 	for i, v in ipairs(warps) do
 		length = length + v["timeBetween"]
 	end
-	outputChatBox(timeFormate(length))
+	outputChatBox("Current time between #1 and #"..#warps.." warps: "..timeFormate(length), 255, 255, 255)
 end)
 
 function timeFormate(ms)
@@ -218,7 +223,7 @@ function timeFormate(ms)
 	else
 		local minutes = string.format("%02.f", math.floor((ms/1000)/60))
 		local seconds = string.format("%02.f", math.floor((ms/1000) - minutes*60))
-		local milsecs = string.format("%03.f", math.floor((ms/10) - seconds*100 ))
+		local milsecs = string.format("%03.f", math.floor((ms/10) - (seconds*100 + minutes*60)))
 		
 		return minutes..":"..seconds..":"..milsecs
 	end
