@@ -3,6 +3,9 @@
 --Also it measures the map's length by calculating time
 	--between each warp from the time it was loaded.
 --Feel free to edit the code, just include some rights :)
+
+--Made some changes you're proud of? make sure to throw it here!
+--Github page: https://github.com/Sagr7/PositionSaver
 ----------------------------------------------------------
 --Commands:
 	-- /sw				For save warp
