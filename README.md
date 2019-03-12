@@ -10,8 +10,8 @@ for now, it's totally client-sided. there is more todo in the future like sharin
  optional: use ``/bind [key] [command]`` for better experience
 
 # Available Commands:
-	-- /sw			    	For save warp
-	-- /lw			    	For load warp
-	-- /dw			    	For delete warp
-	-- /resetWarps		For delete all warps
-	-- /duration	  	duration between the first and the last warp
+	-- /sw			    	Save warp
+	-- /lw			    	Load warp
+	-- /dw			    	Delete warp
+	-- /resetWarps			Delete all warps
+	-- /duration	  		Duration between the first and the last warp
