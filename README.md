@@ -1,3 +1,6 @@
+# v1.5 is now here!
+With a highly customizable GUI window, press F6 by default to open it
+
 # PositionSaver
 an MTA:SA script for save and loading position.
 
@@ -13,6 +16,7 @@ for now, it's totally client-sided. there is more todo in the future like sharin
  optional: use ``/bind [key] [command]`` for better experience
 
 # Available Commands:
+--From v1.5 there is gui that to customize your commands! enabled by pressing F6 by default.
 	-- /sw			    	Save warp
 	-- /lw			    	Load warp
 	-- /dw			    	Delete warp
