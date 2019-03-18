@@ -1,6 +1,6 @@
 
 local notesDuration = 2000
-local screenX, screenY = guiGetScreenSize()
+local _, screenY = guiGetScreenSize()
 
 local someTimer = nil
 local someText = ""
