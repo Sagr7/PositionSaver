@@ -1,5 +1,6 @@
 # v1.5 is now here!
 With a highly customizable GUI window, press F6 by default to open it
+Also there is some dxDraws added
 
 # PositionSaver
 an MTA:SA script for save and loading position.
