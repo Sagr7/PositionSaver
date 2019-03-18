@@ -140,7 +140,7 @@ function saveSettings()
 	local dw = guiGetText(GUIEditor.edit[3])
 	local rw = guiGetText(GUIEditor.edit[4])
 	local dur = guiGetText(GUIEditor.edit[5])
-	outputChatBox(sw..":"..lw..":"..dw..":"..rw..":"..dur)
+	--outputChatBox(sw..":"..lw..":"..dw..":"..rw..":"..dur)
 	if string.find(sw, " ") ~= nil or string.find(sw, "/") ~= nil then
 		outputChatBox("PS ERRPR: Save Warp command has an illegal character")
 		return
@@ -155,6 +155,12 @@ function saveSettings()
 		return
 	elseif string.find(dur, " ") ~= nil or string.find(sw, "/") ~= nil then
 		outputChatBox("PS ERRPR: Duration command has an illegal character")
+		return
+	elseif string.lower(lw) == string.lower(sw) 
+		or string.lower(dw) == string.lower(lw) 
+		or string.lower(rw) == string.lower(dw) 
+		or string.lower(dur) == string.lower(rw) then
+		outputChatBox("PS ERRPR: You can't duplicate two commands for!")
 		return
 	end
 	
