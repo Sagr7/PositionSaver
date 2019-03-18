@@ -1,6 +1,6 @@
 
 local notesDuration = 2000
-local _, screenY = guiGetScreenSize()
+local screenX, screenY = guiGetScreenSize()
 
 local someTimer = nil
 local someText = ""
@@ -29,7 +29,7 @@ end
 
 function drawNotes()
 	if someText and tostring(someText) and string.len(someText) > 3 then
-		dxDrawRectangle(40, (screenY/2) - 100, dxGetTextWidth(someText, 0.8, "bankgothic", true) + 15, 25, tocolor(0,0,0, 180))
+		dxDrawRectangle(40, (screenY/2) - 100, dxGetTextWidth(someText, 0.8, "bankgothic", true) + 15, 25, tocolor(0,0,0, 220))
 		dxDrawText(someText, 50, (screenY/2) - 100, _, _, _, 0.8, "bankgothic", _, _, _, _, _,true)
 	end
 	
