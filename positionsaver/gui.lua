@@ -72,7 +72,7 @@ addEventHandler("onClientResourceStart", resourceRoot,
 		addEventHandler("onClientGUIClick", GUIEditor.checkbox[2], function()
 			isChatBoxNotes = guiCheckBoxGetSelected(GUIEditor.checkbox[2])
 		end, false)
-		
+		guiSetInputEnabled("no_binds_when_editing")
 		guiSetVisible(GUIEditor.window[1], false)
     end
 )
